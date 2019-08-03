@@ -1,0 +1,178 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+center,
+u,
+b,
+i {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline
+}
+
+body {
+    line-height: 1;
+}
+
+:focus {
+    outline: 0
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: ""
+}
+
+blockquote,
+q {
+    quotes: ""
+}
+
+input,
+textarea {
+    margin: 0;
+    padding: 0
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #000;
+    background-color: #000;
+    height: 1px
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.router-link-exact-active p {
+    color: red!important;
+}
+
+html {
+    font-size: 50px;
+    font-family: PingFangSC-Regular, Arial, Helvetica, sans-serif
+}
+
+.clearFloat {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.min-header {
+    font-size: .32rem;
+    height: .76rem;
+    line-height: .76rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    background: #fff;
+}
+
+.min-header::before {
+    content: "";
+    display: inline-block;
+    width: .18rem;
+    height: .18rem;
+    border: 2px solid #000;
+    border-color: transparent transparent #000 #000;
+    transform: rotate(45deg);
+    position: fixed;
+    top: .24rem;
+    left: .4rem;
+    z-index: 99999;
+}
+
+.submain {
+    margin-top: .76rem;
+}
