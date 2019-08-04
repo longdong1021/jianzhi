@@ -14,11 +14,31 @@
                 <div class="userinfofor"></div>
             </router-link>
             <div class="content">
-                <mt-field label="用户昵称" placeholder="请填写昵称" class="algin-r" v-model="username"></mt-field>
-                <h3 class="item_name">个性签名</h3>
-                <mt-field placeholder="请输入您的个性签名" type="textarea" rows="4" class="add-bottom" v-model="introduction"></mt-field>
-                <mt-field label="绑定手机" placeholder="未绑定" class="algin-r" v-model="phone"></mt-field>
-                <mt-field label="绑定邮箱" placeholder="未绑定" class="algin-r" v-model="emaill"></mt-field>
+                <h3 class="item_name">基本信息</h3>
+                <mt-field label="姓名" placeholder="请填写姓名" class="algin-r" v-model="name"></mt-field>
+                <mt-field label="性别" placeholder="请选择性别" class="algin-r" type="select" v-model="gender">
+                    <option value=1>男</option>
+                    <option value=2>女</option>
+                </mt-field>
+                <!-- <mt-radio
+                    align="right"
+                    title="请选择查询业务"
+                    v-model="gender"
+                    :options="options" @change="checkeds">
+                </mt-radio> -->
+                <div></div>
+                <!-- <select name="gender" v-model="gender" style=" width: 100%;border: 0px solid #ccc;background: #fff;font-size:0.28rem;">
+                    <option value=1>男</option>
+                    <option value=2>女</option>
+                </select> -->
+                <mt-field label="年龄" placeholder="请填写年龄" class="algin-r" type="number" v-model="age"></mt-field>
+                <h3 class="item_name">教育经历</h3>
+                <mt-field label="入学年份" placeholder="请填写入学年份" class="algin-r" v-model="entrance"></mt-field>
+                <mt-field label="学校名称" placeholder="请填写学校名称" class="algin-r" v-model="university"></mt-field>
+                <h3 class="item_name">工作经验</h3>
+                <mt-field placeholder="请填写工作经验" type="textarea" rows="4" class="add-bottom" v-model="experience"></mt-field>
+                <h3 class="item_name">自我简介</h3>
+                <mt-field placeholder="请填写简介" type="textarea" rows="4" class="add-bottom" v-model="introduction"></mt-field>
                 <div style="margin: 0.2rem;"><mt-button type="primary" size="small" style="width:100%;">保存</mt-button></div>
             </div>
         </div>  
@@ -30,14 +50,26 @@ export default {
     name:"resume",
     data(){
         return {
-            username:'',
+            options: [
+                {label: '银联线上线下业务',value: '00'},
+                {label: '银联二维码业务',value: '01'}
+            ],
+            name:'',
+            gender:'',
+            age:'',
+
+            entrance:'',
+            university:'',
+            experience:'',
             introduction:'',
-            phone:'',
-            emaill:'',
 
         }
     },
-    methods: {}
+    methods: {
+        checkeds () {
+            console.log('this.valueChoose', this.gender)
+        }
+    }
 }
 </script>
 <style scoped>
@@ -52,9 +84,12 @@ export default {
 .userjinfo {
   font-size: 0.3rem;
 }
+.userinfo {
+  padding: .3rem 0;
+}
 .userinfo .user_img {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
   float: left;
   border-radius: 50%;
 }
@@ -80,7 +115,6 @@ export default {
     font-size: 0.26rem;
     line-height: 0.46rem;
     text-align: left;
-    border-top: .2rem solid rgb(248, 248, 248);
 }
 .algin-r{
 }

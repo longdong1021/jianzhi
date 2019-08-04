@@ -108,10 +108,11 @@ export default {
 }
 .userinfo {
   border-radius: 50%;
+  padding: .3rem 0;
 }
 .userinfo .user_img {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
   float: left;
   border-radius: 50%;
 }
