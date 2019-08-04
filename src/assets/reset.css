@@ -146,6 +146,10 @@ html {
     zoom: 1;
 }
 
+.app {
+    padding-bottom: 1.5rem;
+}
+
 .min-header {
     font-size: .32rem;
     height: .76rem;

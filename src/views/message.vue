@@ -47,9 +47,9 @@ export default {
 </script>
 <style scoped>
 .messagetop {
-  font-size: 0.32rem;
-  height: 0.76rem;
-  line-height: 0.76rem;
+  font-size: 0.48rem;
+  height: 0.96rem;
+  line-height: 0.96rem;
   text-align: center;
   position: fixed;
   top: 0;
@@ -60,9 +60,10 @@ export default {
   padding: 0 0.2rem;
 }
 .submain {
-  margin: 0.76rem 0.2rem 0 0.2rem;
+  margin: 0.96rem 0.2rem 0 0.2rem;
 }
 .messages {
+  padding-top: 0.4rem;
 }
 .messages h2 {
   font-size: 0.4rem;
@@ -87,7 +88,7 @@ export default {
 .instructions {
   font-size: 0.28rem;
   margin-top: 1.2rem;
-  border-top: 0.2rem solid #eee;
+  border-top: 0.2rem solid rgb(248, 248, 248);
   padding-top: 1rem;
 }
 .instructions img {
@@ -103,8 +104,8 @@ export default {
   padding-left: 0.2rem;
 }
 .iconfont {
-    font-size: .6rem;
-    height: 0.8rem;
-    line-height: 0.8rem;
+  font-size: 0.6rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
 }
 </style>

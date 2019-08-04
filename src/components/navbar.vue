@@ -47,7 +47,7 @@ export default {
 </script>
 <style scoped>
 .navbar {
-  color: #67bc00;
+  color: #999;
 }
 .mint-tabbar {
   position: fixed;
@@ -61,8 +61,13 @@ export default {
   display: block;
 }
 .iconfont {
-    font-size: .6rem;
-    height: 0.8rem;
-    line-height: 0.8rem;
+    font-size: .48rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+}
+
+.mint-tabbar > .mint-tab-item.is-selected {
+    background-color: #eaeaea;
+    color: rgb(67, 167, 7);
 }
 </style>

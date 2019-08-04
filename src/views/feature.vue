@@ -2,7 +2,7 @@
   <div>
     <div class="featuretop">
       <h2>Selected</h2>
-      <span><em class="iconfont iconfont-top">&#xe640;</em>换一批</span>
+      <span style="font-size: 0.32rem; color: #79c849;"><em class="iconfont iconfont-top">&#xe640;</em>换一批</span>
     </div>
     <div class="submain">
       <div class="conlist">
@@ -58,13 +58,13 @@ export default {
           videopic: "../assets/img/feature-job-img1.jpg"
         },
         {
-          id: 3,
+          id: 4,
           title: "热门：手机兼职，在家轻松日赚300以上",
           company: "江西甚至网络有限公司",
           videopic: "../assets/img/feature-job-img1.jpg"
         },
         {
-          id: 3,
+          id: 5,
           title: "热门：手机兼职，在家轻松日赚300以上",
           company: "江西甚至网络有限公司",
           videopic: "../assets/img/feature-job-img1.jpg"
@@ -77,9 +77,9 @@ export default {
 </script>
 <style scoped>
 .featuretop {
-  font-size: 0.32rem;
-  height: 0.76rem;
-  line-height: 0.76rem;
+  font-size: 0.48rem;
+  height: .96rem;
+  line-height: 0.96rem;
   text-align: center;
   position: fixed;
   top: 0;
@@ -91,12 +91,13 @@ export default {
 }
 .featuretop h2 {
   float: left;
+  font-weight: bold;
 }
 .featuretop span {
   float: right;
 }
 .submain {
-  margin: 0.76rem 0.2rem 0 0.2rem;
+  margin: 0.96rem 0.2rem 0 0.2rem;
 }
 .conlist .list-item {
   line-height: 0.68rem;
@@ -117,24 +118,30 @@ export default {
 }
 .conlist .list-item .item-price {
   float: left;
-  color: red;
+  color: white;
+  padding-left: .2rem;
+  font-size: .3rem;
 }
 .conlist .list-item .item-demand {
   float: right;
   text-align: right;
+  padding-right: .2rem;
+  color: white;
+    font-size: 0.24rem;
 }
 .conlist .list-item .list-com {
   background-size: 8rem;
   height: 2rem;
   font-size: 0.36rem;
-  background: url("../assets/img/feature-job-img1.jpg") no-repeat 100% 100%;
-  text-shadow: -1px -1px white, 1px 1px #333;
-  padding: 0.2rem;
+  background: url("../assets/img/feature-job-img1.jpg") no-repeat;
+  background-size: 100%;
+  border-radius: .2rem;
 }
 .conlist .list-item .list-com .item-title {
   color: white;
   font-weight: bold;
   font-size: 0.36rem;
+  padding:.34rem .2rem 0 .2rem;
 }
 .iconfont-top {
     margin-right:.1rem;

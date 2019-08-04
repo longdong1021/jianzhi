@@ -2,7 +2,7 @@
     <div>
         <router-link tag="div" to="/user" class="min-header">关于我们</router-link>
         <div class="submain">
-            <h1 class="title">关于我们</h1>
+            <!-- <h1 class="title">关于我们</h1> -->
             <div class="content">
                 <p>来自不同行业的兼职、短期及临时工作可随时随地任你搜寻，更可网上阅读有关最新兼职资讯。</p>
                 <br>
@@ -48,5 +48,6 @@ export default {
 .content{
     font-size: 0.26rem;
     line-height: 0.46rem;
+        padding-top: 1.2rem;
 }
 </style>

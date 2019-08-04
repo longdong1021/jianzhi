@@ -14,6 +14,8 @@ import contact from '@/views/contact'
 import feedback from '@/views/feedback'
 import about from '@/views/about'
 
+import userinfo from '@/views/userinfo'
+import resume from '@/views/resume'
 import detail from '@/views/detail'
 import navbar from '@/components/navbar'
 
@@ -23,7 +25,7 @@ Vue.use(MintUI)
 import App from './App.vue'
 import './assets/reset.css'
 import './assets/iconfont/iconfont.css'
-
+// import './assets/css/mint-reset.scss' //全局修改mint-UI样式
 Vue.config.productionTip = false
 
 
@@ -41,6 +43,8 @@ const router = new Router({
         { path: '/user/feedback', component: feedback },
         { path: '/user/about', component: about },
 
+        { path: '/user/userinfo', component: userinfo },
+        { path: '/user/resume', component: resume },
         { path: '/jobs/detail/:id', component: detail },
 
 

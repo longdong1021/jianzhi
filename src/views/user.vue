@@ -5,8 +5,8 @@
       <span class="iconfont iconfont-top">&#xe604;</span>
     </div>
     <div class="userbox">
-      <div class="userinfo">
-        <img src="@/assets/img/userimg.png" alt class="userimg" />
+      <router-link  tag="div" to="user/userinfo" class="userinfo">
+        <img src="@/assets/img/userimg.png" alt class="user_img" />
         <div class="user_title">
           <dl>
             <dt class="user_max_title">15910807805</dt>
@@ -14,18 +14,20 @@
           </dl>
         </div>
         <div class="userinfofor"></div>
-      </div>
+      </router-link>
       <div class="userjianli">
         <h2 class="userjname">我的简历</h2>
         <p class="userjinfo">完善简历提高你的录取率！</p>
-        <mt-button type="primary" size="small">去完善</mt-button>
+        <router-link to="user/resume">
+          <mt-button type="primary" class="set-button" size="small">去完善</mt-button>
+        </router-link>
         <img src="@/assets/img/myjob.png" alt class="userjad" />
       </div>
       <div class="usertype">
         <h2>我的报名</h2>
         <ul>
           <li>
-            <div class="iconfont iconfont-type">&#xe748;</div>
+            <div class="iconfont iconfont-type">&#xe607;</div>
             <p>已报名</p>
           </li>
           <li>
@@ -33,7 +35,7 @@
             <p>已录取</p>
           </li>
           <li>
-            <div class="iconfont iconfont-type">&#xe631;</div>
+            <div class="iconfont iconfont-type">&#xe652;</div>
             <p>已到岗</p>
           </li>
           <li>
@@ -82,9 +84,9 @@ export default {
   font-size: 0.4rem;
 }
 .featuretop {
-  font-size: 0.32rem;
-  height: 0.76rem;
-  line-height: 0.76rem;
+  font-size: 0.48rem;
+  height: 0.96rem;
+  line-height: 0.96rem;
   text-align: center;
   position: fixed;
   top: 0;
@@ -96,39 +98,55 @@ export default {
 }
 .featuretop h2 {
   float: left;
+  font-weight: bold;
 }
 .featuretop span {
   float: right;
 }
-.userbox{
-  margin: .8rem .2rem .2rem .2rem;
+.userbox {
+  margin: 0.96rem 0.2rem 0.2rem 0.2rem;
 }
 .userinfo {
   border-radius: 50%;
 }
-.userimg {
+.userinfo .user_img {
   width: 1.4rem;
   height: 1.4rem;
   float: left;
   border-radius: 50%;
 }
-.user_title {
+.userinfo .user_title {
   margin-left: 1.8rem;
   line-height: 0.6rem;
+  position: relative;
 }
-.user_max_title {
+.userinfo .user_title::after {
+  content: "";
+    display: inline-block;
+    width: 0.18rem;
+    height: 0.18rem;
+    border: 1px solid #666;
+    border-color: transparent transparent #666 #666;
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+    position: absolute;
+    top: 0.44rem;
+    right: 0.2rem;
+    z-index: 1;
+}
+.userinfo .user_max_title {
   font-size: 0.4rem;
 }
-.user_min_title {
+.userinfo .user_min_title {
   font-size: 0.26rem;
   color: #999;
 }
 .userjianli {
   font-size: 0.4rem;
   line-height: 0.6rem;
-  padding: 0.6rem .2rem 0.4rem .2rem;
+  padding: 0.6rem 0.2rem 0.4rem 0.2rem;
   position: relative;
-  border-bottom: 0.1rem solid rgb(228, 228, 228);
+  border-bottom: 0.2rem solid rgb(248, 248, 248);
 }
 .userjname {
   font-size: 0.4rem;
@@ -138,15 +156,16 @@ export default {
 }
 .userjad {
   float: right;
-  right: 0.2rem;
-  position: absolute;
-  width: 2.8rem;
-  top: 0;
+    right: 0.2rem;
+    position: absolute;
+    width: 3.8rem;
+    top: 0;
+    margin-right: -.4rem;
 }
 
 .usertype {
-  padding-bottom: .3rem;
-  border-bottom: 0.1rem solid rgb(228, 228, 228);
+  padding-bottom: 0.3rem;
+  border-bottom: 0.2rem solid rgb(248, 248, 248);
 }
 .usertype h2 {
   font-size: 0.4rem;
@@ -158,12 +177,12 @@ export default {
   display: flex;
 }
 .usertype ul li {
-  font-size: 0.3rem;
+  font-size: 0.28rem;
   flex: 1;
   text-align: center;
   line-height: 0.36rem;
-  padding-top: .2rem;
-  
+  padding-top: 0.2rem;
+  color: #666;
 }
 .usertype ul li svg {
   width: 0.8rem;
@@ -175,37 +194,43 @@ export default {
 .usertools ul {
 }
 .usertools ul li {
-      line-height: 1rem;
-    font-size: 0.3rem;
-    border-bottom: 1px solid #e6e6e6;
-    position: relative;
+  line-height: 1rem;
+  font-size: 0.28rem;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  color: #666;
 }
 .usertools ul li::after {
-    content: "";
-    display: inline-block;
-    width: .18rem;
-    height: .18rem;
-    border: 1px solid #666;
-    border-color: transparent transparent #666 #666;
-    transform: rotate(225deg);
-    position: absolute;
-    top: .44rem;
-    right: .2rem;
-    z-index: 1;
+  content: "";
+  display: inline-block;
+  width: 0.18rem;
+  height: 0.18rem;
+  border: 1px solid #666;
+  border-color: transparent transparent #666 #666;
+  transform: rotate(225deg);
+  position: absolute;
+  top: 0.44rem;
+  right: 0.2rem;
+  z-index: 1;
 }
 
+.set-button{
+  background: #fff;
+    color: #43a707;
+    border: 1px solid #43a707;
+}
 /**************************************************/
 .iconfont-type {
-    font-size: .6rem;
-    height: 0.9rem;
-    line-height: 0.8rem;
-    color: #67bc00;
+  font-size: 0.6rem;
+  height: 0.9rem;
+  line-height: 0.8rem;
+  color: #67bc00;
 }
 .iconfont-top {
-    font-size: .4rem;
-    height: .7rem;
-    line-height: 0.7rem;
-    color: #5d5d5d;
+  font-size: 0.4rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  color: #5d5d5d;
 }
 
 /**************************************************/
