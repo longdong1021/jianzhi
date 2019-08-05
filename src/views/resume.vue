@@ -25,7 +25,7 @@
                     v-model="gender"
                     :options="options" @change="checkeds">
                 </mt-radio> -->
-                <div></div>
+
                 <!-- <select name="gender" v-model="gender" style=" width: 100%;border: 0px solid #ccc;background: #fff;font-size:0.28rem;">
                     <option value=1>男</option>
                     <option value=2>女</option>
@@ -58,10 +58,6 @@ export default {
     name:"resume",
     data(){
         return {
-            options: [
-                {label: '银联线上线下业务',value: '00'},
-                {label: '银联二维码业务',value: '01'}
-            ],
             name:'',
             gender:'',
             age:'',
@@ -78,9 +74,9 @@ export default {
                     values: [{name: '男', value: 1}, {name:'女', value: 2}],
                 }
             ],
-
         }
     },
+    
     methods: {
         checkeds () {
             console.log('this.valueChoose', this.gender)
@@ -141,8 +137,7 @@ export default {
     line-height: 0.46rem;
     text-align: left;
 }
-.algin-r{
-}
+
 .add-bottom{
 border-bottom: .2rem solid rgb(248, 248, 248);
 }
