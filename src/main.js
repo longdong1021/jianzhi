@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
+import './vue-axios'
+
 import home from '@/views/home'
 import feature from '@/views/feature'
 import message from '@/views/message'
