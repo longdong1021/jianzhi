@@ -1,9 +1,9 @@
 <template>
   <div class="user">
-    <div class="featuretop">
+    <router-link class="featuretop"  tag="div" to="user/userinfo">
       <h2>Personal</h2>
       <span class="iconfont iconfont-top">&#xe604;</span>
-    </div>
+    </router-link>
     <div class="userbox">
       <router-link  tag="div" to="user/userinfo" class="userinfo">
         <img src="@/assets/img/userimg.png" alt class="user_img" />
@@ -47,16 +47,16 @@
       <div class="usertools">
         <ul>
           <li>
-            <router-link tag="div" to="/user/collection">我的收藏</router-link>
+            <router-link tag="div" to="/user/collection"><span class="iconfont">&#xe60d; </span>我的收藏</router-link>
           </li>
           <li>
-            <router-link tag="div" to="/user/contact">联系我们</router-link>
+            <router-link tag="div" to="/user/contact"><span class="iconfont">&#xe61f; </span>联系我们</router-link>
           </li>
           <li>
-            <router-link tag="div" to="/user/feedback">意见反馈</router-link>
+            <router-link tag="div" to="/user/feedback"><span class="iconfont">&#xe61e; </span>意见反馈</router-link>
           </li>
           <li>
-            <router-link tag="div" to="/user/about">关于我们</router-link>
+            <router-link tag="div" to="/user/about"><span class="iconfont">&#xe667; </span>关于我们</router-link>
           </li>
         </ul>
       </div>
@@ -219,6 +219,7 @@ export default {
   background: #fff;
     color: #43a707;
     border: 1px solid #43a707;
+    margin: .2rem 0;
 }
 /**************************************************/
 .iconfont-type {

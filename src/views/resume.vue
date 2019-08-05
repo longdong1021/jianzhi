@@ -85,7 +85,7 @@ export default {
       this.popVisible = false;
     },
     onPopConfirm() {
-      debugger
+      // debugger
       var curPopValue = this.$refs.popPicker.getSlotValue(0);
       this.gender = curPopValue.name;
       console.log(curPopValue);
