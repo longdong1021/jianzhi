@@ -17,7 +17,6 @@ import about from '@/views/about'
 import userinfo from '@/views/userinfo'
 import resume from '@/views/resume'
 import detail from '@/views/detail'
-import navbar from '@/components/navbar'
 
 Vue.use(Router)
 Vue.use(MintUI)
@@ -48,7 +47,6 @@ const router = new Router({
         { path: '/jobs/detail/:id', component: detail },
 
 
-        // { path: '/navbar', component: navbar },
     ]
 });
 

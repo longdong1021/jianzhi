@@ -21,8 +21,6 @@
   <!--底部选项卡-->
 </template>
 <script>
-import { debuglog } from "util";
-
 export default {
   name: "navbar",
   data() {
@@ -41,7 +39,6 @@ export default {
     } else {
       this.selected = this.$route.fullPath.substr(1);
     }
-    console.log(this.selected);
   }
 };
 </script>
