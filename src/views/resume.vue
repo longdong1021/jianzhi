@@ -17,20 +17,10 @@
         <h3 class="item_name">基本信息</h3>
         <mt-field label="姓名" placeholder="请填写姓名" class="algin-r" v-model="name"></mt-field>
         <div class="form-item">
-          <label>性别</label>
-          <span class="full" @click="popVisible=true">{{ gender || '请选择性别'}}</span>
+          <label style="padding-left: .22rem;">性别</label>
+          <span class="full" @click="popVisible=true" style="font-size: .3rem;color: #777777;">{{ gender || '请选择性别'}}</span>
         </div>
-        <!-- <mt-radio
-                    align="right"
-                    title="请选择查询业务"
-                    v-model="gender"
-                    :options="options" @change="checkeds">
-        </mt-radio>-->
-
-        <!-- <select name="gender" v-model="gender" style=" width: 100%;border: 0px solid #ccc;background: #fff;font-size:0.28rem;">
-                    <option value=1>男</option>
-                    <option value=2>女</option>
-        </select>-->
+        
         <mt-field label="年龄" placeholder="请填写年龄" class="algin-r" type="number" v-model="age"></mt-field>
         <h3 class="item_name">教育经历</h3>
         <mt-field label="入学年份" placeholder="请填写入学年份" class="algin-r" v-model="entrance"></mt-field>
@@ -95,6 +85,7 @@ export default {
       this.popVisible = false;
     },
     onPopConfirm() {
+      debugger
       var curPopValue = this.$refs.popPicker.getSlotValue(0);
       this.gender = curPopValue.name;
       console.log(curPopValue);
