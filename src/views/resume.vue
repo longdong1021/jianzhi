@@ -76,7 +76,18 @@ export default {
       ]
     };
   },
-
+  created(){
+    // // get 请求 demo
+    // this.$axios.get('/api/index/sendMsg?tel=18200000000').then(res => {
+    //     console.log(res)
+    // }).catch(err => { console.log(res)});
+    
+    // // post 请求 deom
+    // let data = { user_id: 1}
+    // this.$axios.post('url', data).then(res => {
+    //     console.log(res)
+    // }).catch(err => { console.log(err) });
+    },
   methods: {
     checkeds() {
       console.log("this.valueChoose", this.gender);
