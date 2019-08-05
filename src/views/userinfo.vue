@@ -20,6 +20,10 @@ export default {
     name:"userinfo",
     data(){
         return {
+            username:'',
+            introduction:'',
+            phone:'',
+            emaill:''
         }
     },
     methods: {}

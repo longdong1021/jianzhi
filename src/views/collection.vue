@@ -43,11 +43,11 @@
     </div>
 </template>
 <script>
-import navbar from "@/components/navbar";
+// import navbar from "@/components/navbar";
 export default {
     name:"collection",
     components: {
-        navbar
+        // navbar
     },
     data(){
         return {
