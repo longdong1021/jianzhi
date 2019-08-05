@@ -16,17 +16,19 @@
             <div class="content">
                 <h3 class="item_name">基本信息</h3>
                 <mt-field label="姓名" placeholder="请填写姓名" class="algin-r" v-model="name"></mt-field>
-                <mt-field label="性别" placeholder="请选择性别" class="algin-r" type="select" v-model="gender">
+                <!-- <mt-field label="性别" placeholder="请选择性别" class="algin-r" type="select" v-model="gender">
                     <option value=1>男</option>
                     <option value=2>女</option>
-                </mt-field>
+                </mt-field> -->
+                <!-- <mt-picker :columns="columns"  @change="onChange"/> -->
+                <!-- <mt-picker :slots="slots" @change="onValuesChange"></mt-picker> -->
                 <!-- <mt-radio
                     align="right"
                     title="请选择查询业务"
                     v-model="gender"
                     :options="options" @change="checkeds">
                 </mt-radio> -->
-                <div></div>
+
                 <!-- <select name="gender" v-model="gender" style=" width: 100%;border: 0px solid #ccc;background: #fff;font-size:0.28rem;">
                     <option value=1>男</option>
                     <option value=2>女</option>
@@ -46,14 +48,33 @@
     </div>
 </template>
 <script>
+// import { Picker } from 'bh-mint-ui2';
+// Vue.component(Picker.name, Picker);
+import { Picker } from 'mint-ui';
+Vue.component(Picker.name, Picker);
+
 export default {
     name:"resume",
     data(){
         return {
-            options: [
-                {label: '银联线上线下业务',value: '00'},
-                {label: '银联二维码业务',value: '01'}
+            slots: [
+                {
+                flex: 1,
+                values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
+                className: 'slot1',
+                textAlign: 'right'
+                }, {
+                divider: true,
+                content: '-',
+                className: 'slot2'
+                }, {
+                flex: 1,
+                values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
+                className: 'slot3',
+                textAlign: 'left'
+                }
             ],
+            columns: ['杭州', '宁波', '温州', '嘉兴', '湖州'],
             name:'',
             gender:'',
             age:'',
@@ -65,10 +86,19 @@ export default {
 
         }
     },
+    
     methods: {
         checkeds () {
-            console.log('this.valueChoose', this.gender)
-        }
+            // console.log('this.valueChoose', this.gender)
+        },
+        // onValuesChange(picker, values) {
+        //     if (values[0] > values[1]) {
+        //         picker.setSlotValue(1, values[0]);
+        //     }
+        // },
+        // onChange(picker, values,column) {
+        //     Toast(`当前值：${value}, 当前索引：${column}`);
+        // }
     }
 }
 </script>
@@ -116,8 +146,7 @@ export default {
     line-height: 0.46rem;
     text-align: left;
 }
-.algin-r{
-}
+
 .add-bottom{
 border-bottom: .2rem solid rgb(248, 248, 248);
 }
