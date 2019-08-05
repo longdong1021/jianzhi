@@ -20,7 +20,6 @@ export default {
     name:"userinfo",
     data(){
         return {
-
         }
     },
     methods: {}

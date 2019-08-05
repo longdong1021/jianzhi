@@ -16,12 +16,9 @@
             <div class="content">
                 <h3 class="item_name">基本信息</h3>
                 <mt-field label="姓名" placeholder="请填写姓名" class="algin-r" v-model="name"></mt-field>
-                <!-- <mt-field label="性别" placeholder="请选择性别" class="algin-r" type="select" v-model="gender">
-                    <option value=1>男</option>
-                    <option value=2>女</option>
-                </mt-field> -->
-                <!-- <mt-picker :columns="columns"  @change="onChange"/> -->
-                <!-- <mt-picker :slots="slots" @change="onValuesChange"></mt-picker> -->
+                <div class="form-item">
+                    <label>性别</label><span class="full" @click="popVisible=true">{{ gender || '请选择性别'}}</span>
+                </div>
                 <!-- <mt-radio
                     align="right"
                     title="请选择查询业务"
@@ -44,61 +41,53 @@
                 <div style="margin: 0.2rem;"><mt-button type="primary" size="small" style="width:100%;">保存</mt-button></div>
             </div>
         </div>  
-        
+        <mt-popup
+        closeOnClickModal='false'
+        v-model="popVisible"
+        position="bottom"
+        style="width:100%">
+            <div class="pop-bar">
+                <span class="left" @click="onPopCanel">取消</span> 请选择 <span class="right" @click="onPopConfirm">确定</span>
+            </div>
+            <mt-picker ref="popPicker" :slots="slots" value-key='name' ></mt-picker>
+        </mt-popup>
     </div>
 </template>
 <script>
-// import { Picker } from 'bh-mint-ui2';
-// Vue.component(Picker.name, Picker);
-import { Picker } from 'mint-ui';
-Vue.component(Picker.name, Picker);
-
 export default {
     name:"resume",
     data(){
         return {
-            slots: [
-                {
-                flex: 1,
-                values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
-                className: 'slot1',
-                textAlign: 'right'
-                }, {
-                divider: true,
-                content: '-',
-                className: 'slot2'
-                }, {
-                flex: 1,
-                values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
-                className: 'slot3',
-                textAlign: 'left'
-                }
-            ],
-            columns: ['杭州', '宁波', '温州', '嘉兴', '湖州'],
             name:'',
             gender:'',
             age:'',
-
             entrance:'',
             university:'',
             experience:'',
             introduction:'',
-
+            popVisible:false,
+            slots: [
+                {
+                    flex: 1,
+                    values: [{name: '男', value: 1}, {name:'女', value: 2}],
+                }
+            ],
         }
     },
     
     methods: {
         checkeds () {
-            // console.log('this.valueChoose', this.gender)
+            console.log('this.valueChoose', this.gender)
         },
-        // onValuesChange(picker, values) {
-        //     if (values[0] > values[1]) {
-        //         picker.setSlotValue(1, values[0]);
-        //     }
-        // },
-        // onChange(picker, values,column) {
-        //     Toast(`当前值：${value}, 当前索引：${column}`);
-        // }
+        onPopCanel(){
+            this.popVisible = false;
+        },
+        onPopConfirm(){
+            var curPopValue = this.$refs.popPicker.getSlotValue(0);
+            this.gender = curPopValue.name;
+            console.log(curPopValue)
+            this.onPopCanel();
+        }
     }
 }
 </script>
@@ -146,8 +135,21 @@ export default {
     line-height: 0.46rem;
     text-align: left;
 }
-
 .add-bottom{
 border-bottom: .2rem solid rgb(248, 248, 248);
 }
+.form-item{line-height: 1; display:flex;}
+.form-item label{font-size: 0.34rem;line-height: 0.6rem; width: 2rem;}
+.form-item .full{flex:1;line-height: 0.6rem;text-align: left;}
+.pop-bar{
+    background: #f2f2f2;
+    font-size: 0.3rem;
+    border-color: #e5e5e5;
+    line-height: 0.8rem;
+    height: 0.8rem;;
+    text-align: center;
+}
+.pop-bar span{width: 1.5rem;padding: 0 0.14rem; line-height: 0.8rem;}
+.pop-bar span.left{float: left;}
+.pop-bar span.right{float: right;}
 </style>
