@@ -1,8 +1,6 @@
 <template>
     <div>
-        <router-link tag="div" to="/user" class="min-header">我的收藏</router-link>
-        <!-- <div class="submain">我的收藏</div>   -->
-        <!-- <navbar></navbar> -->
+        <router-link tag="div" to="/user" class="min-header">已报名</router-link>
         <div class="submain">
             <div class="conlist">
                 <router-link tag="div" :to="'/jobs/detail/1'" class="list-item clearfix">
@@ -13,7 +11,7 @@
                     </div>
                     <div class="list-uite-right">
                         <img src="../assets/img/list-1@2x.png" alt="">
-                        <mt-button type="danger" size="small" class="set-button">取消收藏</mt-button>
+                        <mt-button type="danger" size="small" class="set-button">已报名</mt-button>
                     </div>
                 </router-link>
                 <router-link tag="div" :to="'/jobs/detail/1'" class="list-item clearfix">
@@ -24,7 +22,7 @@
                     </div>
                     <div class="list-uite-right">
                         <img src="../assets/img/list-1@2x.png" alt="">
-                        <mt-button type="danger" size="small" class="set-button">取消收藏</mt-button>
+                        <mt-button type="danger" size="small" class="set-button">已报名</mt-button>
                     </div>
                 </router-link>
                 <router-link tag="div" :to="'/jobs/detail/1'" class="list-item clearfix">
@@ -35,20 +33,16 @@
                     </div>
                     <div class="list-uite-right">
                         <img src="../assets/img/list-1@2x.png" alt="">
-                        <mt-button type="danger" size="small" class="set-button">取消收藏</mt-button>
+                        <mt-button type="danger" size="small" class="set-button">已报名</mt-button>
                     </div>
                 </router-link>
             </div>
-        </div>
+        </div>  
     </div>
 </template>
 <script>
-// import navbar from "@/components/navbar";
 export default {
-    name:"collection",
-    components: {
-        // navbar
-    },
+    name:"yetapply",
     data(){
         return {
 
@@ -122,4 +116,5 @@ white-space: nowrap;
     display: inline-block;
     vertical-align: sub;
 }
+
 </style>

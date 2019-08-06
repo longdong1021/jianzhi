@@ -16,6 +16,11 @@ import contact from '@/views/contact'
 import feedback from '@/views/feedback'
 import about from '@/views/about'
 
+import yetapply from '@/views/yetapply'
+import yetenroll from '@/views/yetenroll'
+import yetfinish from '@/views/yetfinish'
+import yetpost from '@/views/yetpost'
+
 import userinfo from '@/views/userinfo'
 import resume from '@/views/resume'
 import detail from '@/views/detail'
@@ -43,6 +48,11 @@ const router = new Router({
         { path: '/user/contact', component: contact },
         { path: '/user/feedback', component: feedback },
         { path: '/user/about', component: about },
+
+        { path: '/user/yetapply', component: yetapply },
+        { path: '/user/yetenroll', component: yetenroll },
+        { path: '/user/yetfinish', component: yetfinish },
+        { path: '/user/yetpost', component: yetpost },
 
         { path: '/user/userinfo', component: userinfo },
         { path: '/user/resume', component: resume },

@@ -27,20 +27,28 @@
         <h2>我的报名</h2>
         <ul>
           <li>
+            <router-link tag="div" to="user/yetapply">
             <div class="iconfont iconfont-type">&#xe607;</div>
             <p>已报名</p>
+            </router-link>
           </li>
           <li>
+            <router-link tag="div" to="user/yetenroll">
             <div class="iconfont iconfont-type">&#xe605;</div>
             <p>已录取</p>
+            </router-link>
           </li>
           <li>
+            <router-link tag="div" to="user/yetpost">
             <div class="iconfont iconfont-type">&#xe652;</div>
             <p>已到岗</p>
+            </router-link>
           </li>
           <li>
+            <router-link tag="div" to="user/yetfinish">
             <div class="iconfont iconfont-type">&#xe696;</div>
             <p>已完成</p>
+            </router-link>
           </li>
         </ul>
       </div>
