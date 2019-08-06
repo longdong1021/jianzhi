@@ -4,15 +4,15 @@
     <div class="submain">
       <div class="messages">
         <ul>
-          <li>
+          <li @click="getOnlineService">
             <p class="iconfont" style="color:#26a2ff;">&#xe66d;</p>
             <p>工作预约</p>
           </li>
-          <li>
+          <li @click="getWorkTime">
             <p class="iconfont" style="color:#67bc00;">&#xe613;</p>
             <p>在线客服</p>
           </li>
-          <li>
+          <li @click="SystemNotice">
             <p class="iconfont" style="color:orange;">&#xe614;</p>
             <p>系统通知</p>
           </li>
@@ -33,6 +33,7 @@
 </template>
 <script>
 import navbar from "@/components/navbar";
+import { debuglog } from 'util';
 
 export default {
   name: "message",
@@ -42,7 +43,17 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    getOnlineService(){
+      this.$messagebox('暂无工作邀约', '');
+    },
+    getWorkTime(){
+      this.$messagebox('请联系QQ:524064029', '');
+    },
+    SystemNotice(){
+      this.$messagebox('暂无通知', '');
+    },
+  }
 };
 </script>
 <style scoped>
