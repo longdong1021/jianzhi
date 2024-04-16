@@ -16,6 +16,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
+body{
+  font-size: 24px;
+}
 </style>
